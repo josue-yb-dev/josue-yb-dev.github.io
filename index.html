@@ -127,7 +127,13 @@ h1 .grad{background:linear-gradient(90deg,var(--text),var(--accent2));-webkit-ba
 .lang-top{display:flex;justify-content:space-between;font-size:15px;font-weight:600;margin-bottom:12px}
 .lang-top span{color:var(--muted);font-weight:400;font-size:13px}
 .bar{height:6px;background:var(--bg2);border-radius:99px;overflow:hidden}
+.bar{display:flex}
 .bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--accent),var(--accent2));border-radius:99px;transition:width 1.2s ease}
+.bar i.next{background:repeating-linear-gradient(135deg,rgba(96,165,250,.55) 0 4px,rgba(96,165,250,.15) 4px 8px);border-radius:0 99px 99px 0;transition-delay:1s;animation:breathe 2s ease-in-out infinite}
+@keyframes breathe{50%{opacity:.45}}
+.lang-note{display:flex;align-items:center;gap:8px;margin-top:10px;font-size:12px;color:var(--accent2)}
+.lang-note .dot{width:7px;height:7px;background:var(--accent2);animation:pulse-b 2s infinite}
+@keyframes pulse-b{0%{box-shadow:0 0 0 0 rgba(96,165,250,.6)}70%{box-shadow:0 0 0 8px rgba(96,165,250,0)}100%{box-shadow:0 0 0 0 rgba(96,165,250,0)}}
 .contact{text-align:center;background:linear-gradient(180deg,var(--card),var(--bg2));border:1px solid var(--line);border-radius:20px;padding:64px 24px;margin-bottom:60px}
 .contact h2{margin-bottom:14px}
 .contact p{color:var(--muted);max-width:520px;margin:0 auto 30px}
@@ -175,7 +181,7 @@ body::before{display:none}
 <div class="status"><span class="dot"></span>Abierto a nuevas oportunidades · Barcelona</div>
 <h1>Josué<br><span class="grad">Yallico Basurto</span></h1>
 <div class="role mono"><span id="typed"></span><span class="cursor">&nbsp;</span></div>
-<p class="lead">Ingeniero de Sistemas TIC y estudiante del Máster en Data Science. Construyo soluciones de datos de extremo a extremo: desde el modelado en Snowflake hasta aplicaciones y dashboards que otros equipos usan a diario.</p>
+<p class="lead">Ingeniero de Sistemas TIC y estudiante del Máster en Data Science. Construyo soluciones de datos de extremo a extremo: desde el modelado de datos hasta aplicaciones y dashboards que otros equipos usan a diario.</p>
 <div class="btns">
 <a href="#experiencia" class="btn primary">Ver experiencia
 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
@@ -284,8 +290,8 @@ body::before{display:none}
 <li>Desarrollo de una app en Power Apps que automatiza la generación y gestión de páginas de SharePoint, con flujos en Power Automate.</li>
 <li>Trabajo con agentes de IA en Copilot Studio y gestión de tareas con Jira y Confluence.</li>
 </ul>
-<div class="impact"><b>Impacto:</b> la app Streamlit reduce el tiempo de consulta de datos de otros departamentos y permite a cada usuario adaptar los resultados a sus necesidades: tablas, gráficas, descargas e informes personalizados.</div>
-<div class="tags"><span>Snowflake</span><span>SQL</span><span>dbt</span><span>Python</span><span>Streamlit</span><span>Power BI</span><span>Power Apps</span><span>Power Automate</span><span>SharePoint</span><span>Copilot Studio</span><span>Git</span><span>Jira</span><span>Confluence</span><span>Arquitectura Medallion</span></div>
+<div class="impact"><b>Impacto:</b> App Streamlit que reduce el tiempo de consulta de datos en otros departamentos y permite a cada usuario adaptar los resultados a sus necesidades: tablas, gráficas, descargas e informes personalizados.</div>
+<div class="tags"><span>Snowflake</span><span>SQL</span><span>dbt</span><span>Python</span><span>Streamlit</span><span>Power BI</span><span>Power Apps</span><span>Power Automate</span><span>SharePoint</span><span>Copilot Studio</span><span>Git</span><span>Jira</span><span>Confluence</span><span>Medallion</span><span>dbschema</span></div>
 </div></div>
 </div>
 </div>
@@ -303,12 +309,12 @@ body::before{display:none}
 <div class="toggle">Ver detalle<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></div>
 <div class="job-detail"><div class="job-detail-inner">
 <ul>
-<li>Desarrollo full-stack de una aplicación web de producción con Angular en el frontend y Python en el backend.</li>
+<li>Desarrollo full-stack de una aplicación web de producción con Angular en front-end y Python en back-end.</li>
 <li>Creación de una aplicación que procesa archivos Excel con miles de registros y genera automáticamente informes con gráficos y tablas.</li>
-<li>Desarrollo y mantenimiento de bases de datos en Microsoft SQL Server.</li>
+<li>Desarrollo y mantenimiento de bases de datos en Microsoft SQL Server y PostgreSQL.</li>
 </ul>
-<div class="impact"><b>Impacto:</b> automatización completa de la creación de informes, eliminando errores de transcripción manual y reduciendo el tiempo dedicado a su edición.</div>
-<div class="tags"><span>Angular</span><span>Python</span><span>Microsoft SQL Server</span><span>SQL</span><span>pandas</span><span>HTML/CSS/JS</span><span>Git</span></div>
+<div class="impact"><b>Impacto:</b> Automatización completa de la creación de informes, eliminando errores de transcripción manual y reduciendo el tiempo dedicado a su edición.</div>
+<div class="tags"><span>Angular</span><span>Python</span><span>SQL</span><span>Microsoft SQL Server</span><span>PostgreSQL</span><span>pandas</span><span>HTML/CSS/JS</span><span>Git</span><span>reportlab</span></div>
 </div></div>
 </div>
 </div>
@@ -316,10 +322,10 @@ body::before{display:none}
 </div>
 <div class="other reveal">
 <h4>Otras experiencias</h4>
-<div class="other-row"><span><b>UNIGRAF ANOIA S.A.</b> (Grupo La Plana) · Producción de packaging</span><span class="mono">07/2024 — 08/2024</span></div>
-<div class="other-row"><span><b>Risk Steward S.L.</b> · Logística y gestión de almacén</span><span class="mono">07/2022 — 09/2022</span></div>
-<div class="other-row"><span><b>FUNOSA S.A.</b> · Mantenimiento industrial en fundición</span><span class="mono">07/2021 — 08/2021</span></div>
-<p>Trabajos de verano durante los estudios en entornos industriales y de producción, donde desarrollé responsabilidad, trabajo en equipo y conocimiento directo de los procesos de planta.</p>
+<div class="other-row"><span><b>UNIGRAF ANOIA S.A.</b> (Grupo La Plana) · Producción de packaging</span><span class="mono"> verano 2024</span></div>
+<div class="other-row"><span><b>Risk Steward S.L.</b> · Logística y gestión de almacén</span><span class="mono">verano 2022</span></div>
+<div class="other-row"><span><b>FUNOSA S.A.</b> · Mantenimiento industrial en fundición</span><span class="mono">verano 2021</span></div>
+<p>Trabajos temporales durante los estudios en entornos industriales y de producción, donde desarrollé responsabilidad, trabajo en equipo y conocimiento directo de los procesos de planta.</p>
 </div>
 </div>
 </section>
@@ -333,22 +339,22 @@ body::before{display:none}
 <div class="num mono">PROJECT 01 — DATA APP</div>
 <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.7 4 3 9 3s9-1.3 9-3V5M3 12c0 1.7 4 3 9 3s9-1.3 9-3"/></svg></div>
 <h3>Vehicle Data Explorer</h3>
-<p>Aplicación Streamlit sobre Snowflake con filtros encadenados por bloques, deduplicación de registros por versión más reciente, paginación, análisis complementarios y exportación de resultados.</p>
+<p>Aplicación Streamlit sobre Snowflake con filtros por bloques, deduplicación de registros por versión más reciente, paginación, análisis complementarios y exportación de resultados.</p>
 <div class="tags"><span>Streamlit</span><span>Snowflake</span><span>SQL</span><span>Python</span></div>
 </div>
 <div class="proj reveal">
 <div class="num mono">PROJECT 02 — AUTOMATION</div>
 <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></svg></div>
-<h3>Generador automático de informes</h3>
-<p>Aplicación que transforma Excels con miles de registros en informes listos para entregar, con gráficos y tablas generados sin intervención manual.</p>
-<div class="tags"><span>Python</span><span>pandas</span><span>Excel</span></div>
+<h3>Report Generator App</h3>
+<p>Aplicación que transforma Excels con miles de registros en informes documentados listos para entregar. Gráficos y tablas generados sin intervención manual.</p>
+<div class="tags"><span>Python</span><span>Excel</span><span>pandas</span><span>matplotlib</span></div>
 </div>
 <div class="proj reveal">
 <div class="num mono">PROJECT 03 — LOW-CODE</div>
 <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 17.5h7M17.5 14v7"/></svg></div>
 <h3>SharePoint Automation App</h3>
-<p>Aplicación en Power Apps conectada a flujos de Power Automate que automatiza la creación y gestión de páginas de SharePoint.</p>
-<div class="tags"><span>Power Apps</span><span>Power Automate</span><span>SharePoint</span></div>
+<p>Aplicación en Power Apps conectada a flujos de Power Automate que automatiza la creación y gestión de páginas de SharePoint y Power BI.</p>
+<div class="tags"><span>Power Apps</span><span>Power Automate</span><span>Power BI</span><span>SharePoint</span></div>
 </div>
 </div>
 </div>
@@ -367,14 +373,13 @@ body::before{display:none}
 <div class="edu-card reveal">
 <div class="yr mono">09/2020 — 06/2025</div>
 <h3>Grado en Ingeniería de Sistemas TIC</h3>
-<p>Universitat Politècnica de Catalunya (UPC) · Manresa</p>
+<p>Universitat Politècnica de Catalunya (UPC) · EPSEM</p>
 </div>
 </div>
 <div class="langs">
 <div class="lang reveal"><div class="lang-top">Castellano<span>Nativo</span></div><div class="bar"><i data-w="100"></i></div></div>
 <div class="lang reveal"><div class="lang-top">Catalán<span>Nativo</span></div><div class="bar"><i data-w="100"></i></div></div>
-<div class="lang reveal"><div class="lang-top">Inglés<span>B2 · EOI</span></div><div class="bar"><i data-w="70"></i></div></div>
-</div>
+<div class="lang reveal"><div class="lang-top">Inglés<span>B2</span></div><div class="bar"><i data-w="70"></i></div><div style="display:flex;align-items:center;gap:8px;margin-top:10px;font-size:12px;color:#60a5fa" class="mono"><span class="dot" style="width:7px;height:7px;background:#60a5fa"></span>Cursando C1</div></div></div>
 </div>
 </section>
 
@@ -393,7 +398,7 @@ body::before{display:none}
 </div>
 </section>
 
-<footer class="mono">© <span id="y"></span> Josué Yallico Basurto · Igualada, Barcelona · Carnet B y vehículo propio</footer>
+<footer class="mono">© <span id="y"></span> Josué Yallico Basurto · Igualada, Barcelona</footer>
 
 <script>
 const roles=["Data & Automation Engineer","Snowflake · dbt · Streamlit","Power Platform · Copilot Studio","Python · SQL · Power BI"];
